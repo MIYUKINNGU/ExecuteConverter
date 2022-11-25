@@ -70,6 +70,7 @@
                             poscount = 0;
                             after.push("run")
                             endfunc();
+                            endfunc = (function () {});
                         }
                     }else if (elem.match(/\"/) || dqcount % 2 == 1){
                         if ((elem.split(/\"/).length - 1) % 2 == 1 || dqcount % 2 == 1) {
