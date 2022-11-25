@@ -5,7 +5,6 @@
 */
 function conver(input) {
     let textlist = input.split(" ");
-    console.log(textlist)
     let after = [];
     let dqcount = 0;
     let selector = false;
