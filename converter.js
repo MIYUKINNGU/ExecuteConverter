@@ -25,9 +25,7 @@ function conver(input) {
                         stack.push("[");
                         break;
                     case '"':
-                        console.log(stack[-1])
                         if (stack.slice(-1)[0] == '"') {
-                            console.log("OK")
                             stack.pop();
                         }else {
                             stack.push('"');
@@ -40,7 +38,6 @@ function conver(input) {
             });
             console.log(stack)
             if (stack.length == 0) {
-                console.log("at @s positioned")
                 after.push("at @s positioned");
                 selector = false;
                 run = true;
@@ -56,6 +53,7 @@ function conver(input) {
                 poscount = 0;
                 after.push("run")
                 endfunc();
+                endfunc = (function () {});
             }
         }else if (elem.match(/\"/) || dqcount % 2 == 1){
             if ((elem.split(/\"/).length - 1) % 2 == 1 || dqcount % 2 == 1) {
@@ -86,12 +84,8 @@ function conver(input) {
             after.push("run");
             count = -1;
         }
-        console.log(count)
-        console.log("------")
         count -= (count > 0)?1:0;
-        console.log(count)
     });
-    console.log(after)
     return after.join(' ').replace(/ run execute/g,"");
 }
 
