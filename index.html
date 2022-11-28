@@ -34,6 +34,7 @@
                     after.push(elem);
                     if (selector) {
                         [...elem].forEach(function (char){
+                            console.log(stack);
                             switch (char){
                                 case "[":
                                     stack.push("[");
@@ -51,6 +52,8 @@
                                     stack.pop()
                                     break;
                             }
+                            console.log(stack);
+                            console.log("1 loop end.")
                         });
                         console.log(stack)
                         if (stack.length == 0) {
