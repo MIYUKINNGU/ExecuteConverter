@@ -49,7 +49,7 @@
                                     }
                                     break;
                                 case "]":
-                                    stack.pop()
+                                    if (stack.slice(-1)[0] == "[") {stack.pop();}
                                     break;
                             }
                             console.log(stack);
