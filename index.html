@@ -52,9 +52,7 @@
                                     break;
                             }
                         });
-                        console.log(stack)
                         if (stack.length == 0) {
-                            console.log("at @s positioned")
                             after.push("at @s positioned");
                             selector = false;
                             run = true;
@@ -101,10 +99,7 @@
                         after.push("run");
                         count = -1;
                     }
-                    console.log(count)
-                    console.log("------")
                     count -= (count > 0)?1:0;
-                    console.log(count)
                 });
                 console.log(after)
                 return after.join(' ').replace(/ run execute/g,"");

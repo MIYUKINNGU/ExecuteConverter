@@ -31,11 +31,10 @@ function conver(input) {
                         }
                         break;
                     case "]":
-                        stack.pop()
+                        if (stack.slice(-1)[0] == "[") {stack.pop();}
                         break;
                 }
             });
-            console.log(stack)
             if (stack.length == 0) {
                 after.push("at @s positioned");
                 selector = false;
